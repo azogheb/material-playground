@@ -14,4 +14,5 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-vulcanize --inline-scripts --inline-css elements.html > vulcanized.html
+vulcanize --inline-scripts --inline-css elements.html | crisper -h vulcanized.html -j vulcanized.js; 
+echo "'use strict';"|cat - vulcanized.js > /tmp/out && mv /tmp/out vulcanized.js;
