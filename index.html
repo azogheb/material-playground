@@ -352,6 +352,64 @@ paper-button[raised].colorful {
   
 </section>
 
+
+ <template id="Demo" is="dom-bind">
+
+    <div class="horizontal-section-container">
+      <div>
+        <h4>Basic Menu</h4>
+        <div class="horizontal-section">
+          <paper-dropdown-menu label="Dinosaurs">
+            <paper-menu class="dropdown-content">
+              <template is="dom-repeat" items="[[dinosaurs]]" as="dinosaur">
+                <paper-item>[[dinosaur]]</paper-item>
+              </template>
+            </paper-menu>
+          </paper-dropdown-menu>
+        </div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    Demo.letters = [
+      'alpha',
+      'beta',
+      'gamma',
+      'delta',
+      'epsilon'
+    ];
+    Demo.dinosaurs = [
+      'allosaurus',
+      'brontosaurus',
+      'carcharodontosaurus',
+      'diplodocus',
+      'ekrixinatosaurus',
+      'fukuiraptor',
+      'gallimimus',
+      'hadrosaurus',
+      'iguanodon',
+      'jainosaurus',
+      'kritosaurus',
+      'liaoceratops',
+      'megalosaurus',
+      'nemegtosaurus',
+      'ornithomimus',
+      'protoceratops',
+      'quetecsaurus',
+      'rajasaurus',
+      'stegosaurus',
+      'triceratops',
+      'utahraptor',
+      'vulcanodon',
+      'wannanosaurus',
+      'xenoceratops',
+      'yandusaurus',
+      'zephyrosaurus'
+    ];
+  </script>
+
   <footer><a href="https://github.com/ebidel/material-playground">View on github</a><footer>
 
   </div>
